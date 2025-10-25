@@ -698,7 +698,13 @@ require('lazy').setup({
           },
         },
 
-        csharp_ls = {},
+        omnisharp = {
+          cmd = { 'omnisharp' },
+          enable_roslyn_analyzers = true,
+          enable_import_completion = true,
+          organize_imports_on_format = true,
+          root_dir = require('lspconfig.util').root_pattern('*.sln', '*.csproj', '.git'),
+        },
 
         ts_ls = {
           on_attach = function(client)
