@@ -158,6 +158,12 @@ vim.o.inccommand = 'split'
 -- Show which line your cursor is on
 vim.o.cursorline = true
 
+-- Match Visual Studio/VS Code indentation defaults
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
+vim.o.expandtab = true
+
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.o.scrolloff = 10
 
@@ -910,7 +916,7 @@ require('lazy').setup({
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        preset = 'default',
+        preset = 'enter',
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
